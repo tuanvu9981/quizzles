@@ -1,0 +1,132 @@
+@font-face {
+  // chữ thường 
+  font-family: 'BaoMoi_Normal'; 
+  src: url('./fonts/Baomoi_gdi.woff');
+}
+
+@font-face {
+  // chữ in đậm 
+  font-family: 'BaoMoi_Bold';
+  src: url('./fonts/Baomoi-SemiBold_gdi.woff');
+}
+
+@font-face {
+  // chữ in nghiên 
+  font-family: 'BaoMoi_Italic';
+  src: url('./fonts/Baomoi-Italic_gdi.woff');
+}
+
+
+body {
+    margin: 0;
+    font-family: 'BaoMoi_Normal'!important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* for flex */
+
+.fl {
+    display: flex;
+}
+
+.fl-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.fl-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for position */
+
+.rel {
+    position: relative !important;
+}
+
+.abs{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+/* for button */
+.btn-container {
+  margin: 5px;
+  padding: 2px;
+  height: 40px;
+  max-width: 150px;
+
+  .btn:hover {
+    background-color: #1d2f8c;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  }
+  .MuiButton-startIcon,
+  .MuiButton-endIcon {
+    svg {
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+}
+
+.btn-icon-container {
+  margin: 5px;
+  
+  svg {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+// for text
+
+.txt-headline1 {
+  font-size: 96px;
+};
+.txt-headline2 {
+  font-size: 60px;
+};
+.txt-headline3 {
+  font-size: 48px;
+};
+.txt-headline4 {
+  font-size: 34px;
+};
+.txt-headline5 {
+  font-size: 24px;
+};
+.txt-headline6 {
+  font-size: 20px;
+};
+
+.txt-body1 {
+  font-size: 16px;
+};
+.txt-body2 {
+  font-size: 14px;
+};
+.txt-body3 {
+    font-size: 18px;
+};
+
+.txt-subtitle1 {
+  font-size: 16px;
+};
+.txt-subtitle2 {
+  font-size: 14px;
+};
+
+.txt-button {
+  font-size: 14px;
+};
+
+.txt-overline {
+  font-size: 10px;
+};
+
+.txt-caption {
+  font-size: 12px;
+};
