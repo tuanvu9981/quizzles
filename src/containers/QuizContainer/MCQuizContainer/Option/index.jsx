@@ -7,6 +7,7 @@ import { Checkbox, Radio, Typography, FormControlLabel } from '@mui/material';
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
 import { setAbleToPassById, setDisableNext } from '../../../../redux/quiz/actions';
+import { useEffect } from 'react';
 
 
 const Option = ({ props }) => {
@@ -21,6 +22,10 @@ const Option = ({ props }) => {
     // PROBLEM HERE
     const { answers, setAnswers } = props;
     const { indexList, setIndexList } = props;
+
+    // useEffect(() => {
+    //     console.log(answers);
+    // }, [answers]);
 
     const handleChangeOption = async (e) => {
         const value = parseInt(e.target.value);
@@ -42,10 +47,28 @@ const Option = ({ props }) => {
                 setSelectedNum(selectedNum + 1);
                 setChosen("correct");
 
-                setAnswers({ state: "correct", selectedNum: answers.selectedNum + 1 });
-                console.log(answers);
+                // setAnswers(prevState => {
+                //     return {
+                //         ...prevState,
+                //         state: "correct",
+                //         selectedNum: prevState.selectedNum + 1
+                //     }
+                // });
+                // console.log(answers);
 
-                setIndexList([...indexList, value]);
+                // setIndexList(prev => {
+                //     return [
+                //         ...prev,
+                //         value
+                //     ]
+                // });
+                // console.log(indexList);
+
+                setAnswers({
+                    ...answers,
+                    state: "correct",
+                    selectedNum: answers.selectedNum + 1
+                });
                 console.log(indexList);
 
                 if (selectedNum === currentQuiz.multipleAnswersTrueIndexes.length) {

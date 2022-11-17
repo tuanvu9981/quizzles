@@ -6,6 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
 import Quiz from '../pages/Quiz';
+import NewCarouselPage from '../pages/NewCarousel';
 
 export const AppRouter = () => (
   <BrowserRouter>
@@ -23,7 +24,8 @@ export const AppRouter = () => (
         }
       )} */}
       {/* component for not found page */}
-      <Route path="*" element={<Quiz />} />      
+      <Route path="*" element={<Quiz />} />    
+      <Route path="/slide" element={<NewCarouselPage />} />    
     </Routes>
   </BrowserRouter>
 );
