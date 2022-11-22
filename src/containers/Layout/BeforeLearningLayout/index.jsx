@@ -7,11 +7,11 @@ import { Main } from './index.style';
 
 const BeforeLearningLayout = ({ children }) => {
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box>
             <Header />
             <Main>
                 {children}
-            </Main>            
+            </Main>
         </Box>
     );
 }

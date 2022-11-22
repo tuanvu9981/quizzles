@@ -1,0 +1,7 @@
+.connectPoint {
+    opacity: 0.5;
+}
+
+.connectPoint:hover {
+    opacity: 1;
+}

@@ -13,6 +13,10 @@ import audio2 from '../assets/mp3-test/voice2.mp3';
 import video1 from '../assets/video-test/movie.mp4';
 import video2 from '../assets/video-test/cat.mp4';
 
+import moonImg from '../assets/images/moon.jpg';
+import mountainImg from '../assets/images/mountain.jpg';
+import starImg from '../assets/images/star.jpeg';
+
 const OPACITY = {
     LOW: 0.3,
     MEDIUM: 0.6,
@@ -222,3 +226,51 @@ export const quizList = [
 // text: "Thanh hỏi",
 // text: "Thanh ngã",
 // text: "Thanh sắc",
+
+export const pairs = [
+    {
+        id: 2,
+        inTestBank: false,
+        title: 'Câu hỏi cho trẻ em lớp 1',
+        backgroundUrl: school2,
+        backgroundOpacity: OPACITY.MEDIUM,
+        textBackgroundColor: FLOATING_BOX_COLOR,
+        question: "Nối các từ với hình ảnh của chúng sao cho đúng",
+        voice: "Hương Giang",
+        rateVoice: 1.5,
+        score: 35,
+        type: "pair_quiz",
+        quizParts: [
+            {
+                content: {
+                    text: "trăng"
+                },
+                pairQuizParts: {
+                    pairContent: {
+                        imageUrl: moonImg,
+                    }
+                }
+            },
+            {
+                content: {
+                    text: "sao"
+                },
+                pairQuizParts: {
+                    pairContent: {
+                        imageUrl: starImg
+                    }
+                }
+            },
+            {
+                content: {
+                    text: "núi"
+                },
+                pairQuizParts: {
+                    pairContent: {
+                        imageUrl: mountainImg,
+                    }
+                }
+            },
+        ]
+    },
+]
